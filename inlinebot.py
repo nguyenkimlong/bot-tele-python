@@ -300,7 +300,7 @@ def get_credentials():
     try:
         scopes = ["https://www.googleapis.com/auth/drive"]  # Full access
 
-        key_file_path = os.path.dirname(__file__) + "\\key-drive.json"  # Path to your service account key file
+        key_file_path = os.path.join(BASE_DIR, "key-drive.json")  # Path to your service account key file
         service_account_email = "data-test@my-project-upload-file-363503.iam.gserviceaccount.com"  # Your service account email
 
         # flow = InstalledAppFlow.from_client_secrets_file(key_file_path,scopes)
