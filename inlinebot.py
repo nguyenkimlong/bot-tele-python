@@ -45,7 +45,8 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 
 logger = logging.getLogger(__name__)
 
-database_path = os.path.dirname(__file__) + "\\MyData.db"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+database_path = os.path.join(BASE_DIR, "MyData.db")
 # cur = con.cursor()    
 # cur.execute('SELECT SQLITE_VERSION()')
      
